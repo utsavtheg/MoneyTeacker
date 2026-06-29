@@ -1,0 +1,249 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter';
+}
+:root{
+  /* backgrounds */
+  --bg:#F8FAFC;
+  --surface:#FFFFFF;
+   
+  /* Text */
+  --text:#111827;
+  --text-secondary:#6B7280;
+
+  /* Primary */
+  --primary:#25638B;
+  --primary-hover:#1D4ED8;
+
+  /* Income */
+  --income: #16A34A;
+    --income-bg: #DCFCE7;
+
+    /* Expense */
+    --expense: #DC2626;
+    --expense-bg: #FEE2E2;
+
+    /* Border */
+    --border: #E5E7EB;
+
+    /* Input */
+    --input-bg: #F9FAFB;
+
+    /* Shadow */
+    --shadow: rgba(0,0,0,.08);
+}
+.dark{
+  display: none;
+  /* Backgrounds */
+    --bg: #0F172A;
+    --surface: #1E293B;
+    --card: #1E293B;
+
+    /* Text */
+    --text: #F8FAFC;
+    --text-secondary: #94A3B8;
+
+    /* Primary */
+    --primary: #3B82F6;
+    --primary-hover: #60A5FA;
+
+    /* Success */
+    --income: #22C55E;
+    --income-bg: rgba(34,197,94,.15);
+
+    /* Expense */
+    --expense: #EF4444;
+    --expense-bg: rgba(239,68,68,.15);
+
+    /* Border */
+    --border: #334155;
+
+    /* Input */
+    --input-bg: #273549;
+
+    /* Shadow */
+    --shadow: rgba(0,0,0,.45);
+}
+.card{
+  height: 30rem;
+  width: 20rem;
+  background:#16587B;
+  color: #F5EEDD;
+  border-radius: 1rem;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: translate(-50%,-50%);
+  box-shadow: 2px 4px 10px rgba(0,0,0,1);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.username{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card i{
+  font-size: 1.5rem;
+}
+.card input{
+  height: 2.5rem;
+  width: 15rem;
+  background: none;
+  font-family: 'Inter',sans-serif;
+  border: none;
+  background:#F1E4D1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.password{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card a{
+  color: #FFFFFF;
+}
+img{
+  width: 5rem;
+  height:5rem;
+  border-radius: 50%;
+  background:#FFFFFF;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.2rem;
+  font-family:'Space Grotesk' sans-serif;
+  font-size: 1.5rem;
+}
+button{
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 2rem;
+  color: #16587B;
+  background:#F1E4D1;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.card1{
+  display: none;
+}
+.dashboard{
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  grid-template-columns: 1fr 2fr 0.5fr 1.5fr;
+  grid-template-rows: 1fr 3fr 4fr 2fr;
+  background: var(--bg);
+  gap: 1rem;
+  
+}
+.options{
+  grid-column: 1/2;
+  grid-row: 1/5;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.left-opt{
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  font-family: 'Space Grotesk' sans-serif;
+  font-weight:600;
+}
+.left-opt img{
+  height:5rem;
+  width:5rem;
+  border: 0.02rem solid #16587B;
+  
+
+}
+.search{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 1rem;
+ border: 0.02rem solid var(--text-secondary);
+ border-radius: 0.5rem;
+ margin:1rem;
+ -webkit-border-radius: 0.5rem;
+ -moz-border-radius: 0.5rem;
+ -ms-border-radius: 0.5rem;
+ -o-border-radius: 0.5rem;
+}
+.search span{
+  color: var(--text-secondary);
+  font-weight: 200;
+}
+
+.search input{
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  -webkit-animation: none;
+}
+.nav{
+  grid-row:1/2;
+  grid-column: 2/5;
+  background: var(--surface);
+}
+.earning{
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background: var(--surface);
+}
+.spending{
+  grid-row: 2/3;
+  grid-column: 3/5;
+  background: var(--surface);
+}
+.graph{
+  grid-row: 3/4;
+  grid-column: 2/4;
+  background: var(--surface);
+}
+.reset{
+  grid-row: 3/5;
+  grid-column: 4/5;
+  background: var(--surface);
+}
+.transactions{
+grid-row: 4/5;
+grid-column: 2/4;
+ background: var(--surface);
+}
