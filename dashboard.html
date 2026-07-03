@@ -12,36 +12,65 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="card">
+    <div class="img">
+      <img src="/Financial_growth-removebg-preview.png" alt="">GrowFinance</div>
+    <h1>Login</h1>
+    <div class="username">
+    <i class="fa-solid fa-circle-user"></i>
+    <input id="loginUser" type="text" placeholder="username">
+    </div>
+    <div class="password">
+      <i class="fa-solid fa-lock"></i>
+      <input id="loginPassword" type="password" placeholder="password">
+    </div>
+   <p>Don't have an account?<a id="register" href="#">Register</a></p>
+   <button id="login">Login</button>
+  </div>
+  <div class="card1">
+    <div class="card">
+    <div class="img">
+      <img src="/Financial_growth-removebg-preview.png" alt="">GrowFinance</div>
+    <h1>SignIn</h1>
+    <div class="username">
+    <i class="fa-solid fa-circle-user"></i>
+    <input id="user" type="text" placeholder="username">
+    </div>
+    <div class="password">
+      <i class="fa-solid fa-lock"></i>
+      <input id="password" type="password" placeholder="password">
+    </div>
+    <p>Already an account?<a id="sign" href="#">Login</a></p>
+   <button id="signin">SignIn</button>
+    </div>
+  </div>
   <div class="dashboard">
     <div class="options">
       <div class="top">
         <div class="left-opt">
           <img id="img" src="/Financial_growth-removebg-preview.png" alt="">
        </div>
-        <div class="right">
-          <i id="cross" class="fa-solid fa-x"></i>
-        </div>
       </div>
       <div class="search">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="search">
-        <i class="fa-solid fa-x"></i>
+        <input type="text" id="searchOption" placeholder="search">
+        
        
        
       </div>
       <span>Main Menu</span>
       <div class="list">
         <span id="dash"><i class="fa-solid fa-clipboard"></i>Dashboard</span>
-        <span><i class="fa-brands fa-google-wallet"></i>Transaction</span>
+        <span id="Transaction"><i class="fa-brands fa-google-wallet"></i>Transaction</span>
         <span id="earn"><i class="fa-solid fa-hand-holding-dollar"></i>Earning</span>
         <span id="spend"><i class="fa-solid fa-wallet"></i>Spending</span>
-        <span><i class="fa-solid fa-coins"></i>Currency</span>
+        <span id="currency"><i class="fa-solid fa-coins"></i>Currency</span>
       </div>
       <span>General</span>
       <div class="general-list">
-        <span><i class="fa-regular fa-sun"></i>Setting</span>
-        <span><i class="fa-solid fa-right-from-bracket"></i>Log-out</span>
-        <span><i class="fa-solid fa-comment"></i>Feedback</span>
+        <span id="settings"><i class="fa-regular fa-sun"></i>Setting</span>
+        <span id="logout"><i class="fa-solid fa-right-from-bracket"></i>Log-out</span>
+        <span id="feedback"><i class="fa-solid fa-comment"></i>Feedback</span>
       </div>
     </div>
     <div class="nav">
@@ -58,8 +87,8 @@
         <div class="tools msg"><i class="fa-regular fa-message"></i></div>
         </div>
        <div class="id">
-        <img src="download (1).jpeg" alt="">
-        <span>name</span>
+        <i class="fa-solid fa-user"></i>
+        <h3 id="name1">name</h3>
        </div>
       </div>
      
@@ -71,22 +100,52 @@
       <canvas id="myChart"></canvas>
     </div>
     <div class="spending">
+      
       <canvas id="myChart1"></canvas>
     </div>
     <div class="graph">
+      <h3 id="totalSaving">₹</h3>
        <canvas id="myChart2"></canvas>
     </div>
-    <div class="reset"></div>
-    <div class="transactions"></div>
+    <div class="reset">
+      
+      <button id="reset">Reset</button>
+      <button id="dk">Mode</button>
+
+    </div>
+    
   </div>
   <div class="earn-form">
-    <i id="cross" class="fa-solid fa-x"></i>
+    <i id="incomeCross" class="fa-solid fa-x"></i>
     <h3>Earning</h3>
     <input id="income" type="text" placeholder="income">
     <input id="source" type="text" placeholder="source">
     <input id="month" type="date">
     <button id="submit">Submit</button>
   </div>
+   <div class="spend-form">
+    <i id="spendCross" class="fa-solid fa-x"></i>
+    <h3>Spending</h3>
+    <input id="spending" type="text" placeholder="spend">
+    <input id="spendSource" type="text" placeholder="source">
+    <input id="spendMonth" type="date">
+    <button id="spendSubmit">Submit</button>
+  </div>
+  <div class="currency">
+    <h2>Currency!</h2>
+    <i id="currencyCross" class="fa-solid fa-x"></i>
+    <input id="amount" type="text" placeholder="Amount">
+    <input id="inputCurrency" type="text" placeholder="Currency">
+    <div class="check">₹</div>
+    <button id="convert">Convert</button>
+  </div>
+  <div class="feedback">
+    <i id="feedCross" class="fa-solid fa-x"></i>
+    <h3>FeedBack!</h3>
+    <input type="text" id="suggestion" placeholder="Write your feedBack!">
+    <button id="fSubmit">Submit</button>
+  </div>
+ 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module" src="dashboard.js"></script>
 </body>
