@@ -3,11 +3,6 @@ import {useForm} from "react-hook-form";
 
 const RHF = () => {
   let {register, handleSubmit,reset,formState:{errors},} = useForm();
- 
- 
-  
-  
-  
   const formSubmit = (data)=>{
     console.log(data);
     reset();
