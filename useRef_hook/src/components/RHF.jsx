@@ -6,6 +6,7 @@ const RHF = () => {
   
   const formSubmit = (data)=>{
     console.log(data);
+    reset();
     
   }
   
