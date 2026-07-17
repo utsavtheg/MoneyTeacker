@@ -1,18 +1,31 @@
 import React from 'react'
 import {useForm} from "react-hook-form";
+import { nanoid } from "nanoid";
 
-const Form = ({setUsers, setToggle}) => {
+const Form = ({setUsers, setToggle,users,updateData}) => {
   
   let {register,handleSubmit, reset,formState:{errors}} = useForm(
     
     {mode:"onChange",
+    defaultValues:updateData,
     }
   );
   console.log("errors",errors);
   
   let formSubmit = (data) => {
-    console.log(data);
-    setUsers((prev) => [...prev, data]);
+   if(updateData){
+    setUsers((prev) =>{
+      return prev.map((val)=>{
+        return val.id === updateData.id ?{...data}:val;
+      });
+    });
+   }else{
+    let arr = [...users, {...data,id:nanoid()}];
+    console.log(arr);
+    
+    setUsers(arr);
+    localStorage.setItem('users',JSON.stringify(arr));
+   }
     reset();
     setToggle((prev) => !prev);
   }

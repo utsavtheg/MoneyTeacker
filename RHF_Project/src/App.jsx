@@ -11,7 +11,7 @@ const App = () => {
        <Navbar setToggle={setToggle}/>
        {toggle ? ( <div className="flex gap-4"> 
       {users.map((elem) =>{
-        return <Usercard user={elem}/>;
+        return <Usercard user={elem} setToggle={setToggle}/>;
       })}
         </div>
        ):(
